@@ -1,0 +1,1079 @@
+/* Styles de base pour assurer une cohÃ©rence visuelle */
+body,
+html {
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0f0d;
+    /* Fond sombre pour un thÃ¨me moderne */
+    color: #ffffff;
+    /* Texte en blanc pour contraster avec le fond */
+}
+
+/* Conteneur principal pour le tableau de bord, centrÃ© et avec un design soignÃ© */
+.dashboard {
+    max-width: 800px;
+    /* Largeur maximale pour une bonne lisibilitÃ© */
+    margin: 20px auto;
+    /* Centrage avec marge uniforme */
+    background-color: #12181b;
+    /* Fond lÃ©gÃ¨rement diffÃ©rent pour distinguer les sections */
+    border-radius: 30px;
+    /* Bords arrondis pour un look moderne */
+    padding: 20px;
+    /* Espacement intÃ©rieur pour Ã©viter que le contenu touche les bords */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre subtile pour un effet de profondeur */
+}
+
+/* Style pour la section du profil utilisateur */
+.user-profile {
+
+    align-items: center;
+    justify-content: center;
+    /* Centrage pour une meilleure esthÃ©tique sur tous les Ã©crans */
+    margin-bottom: 15px;
+    /* Ajustement de l'espacement */
+}
+
+/* Style pour l'avatar */
+.avatar img {
+    width: 80px;
+    /* Dimensionnement fixe pour la cohÃ©rence */
+    height: 80px;
+    /* Garde l'avatar carrÃ© */
+    border-radius: 40px;
+    /* Rend l'avatar circulaire */
+    border: 2px solid #1e262b;
+    /* Bordure pour le faire ressortir sur n'importe quel fond */
+    margin-right: 0px;
+    /* Espacement entre l'avatar et le texte d'information */
+}
+
+/* Adaptations pour les appareils mobiles */
+@media (max-width: 768px) {
+    .user-profile {
+        flex-direction: column;
+        /* Pour s'assurer que les Ã©lÃ©ments sont empilÃ©s verticalement */
+    }
+
+    .avatar {
+        display: flex;
+        /* Transforme le conteneur de l'avatar en flex container */
+        justify-content: center;
+        /* Centre horizontalement l'avatar */
+    }
+
+    .avatar img {
+        margin-bottom: 10px;
+        /* Optionnel: Ajoute un espace sous l'avatar si nÃ©cessaire */
+    }
+}
+
+
+/* Styles pour les informations de l'utilisateur */
+.user-info h2,
+.user-info p {
+    margin: 0;
+    /* Suppression des marges par dÃ©faut pour un contrÃ´le prÃ©cis */
+    padding: 0;
+    /* Suppression du padding par dÃ©faut */
+}
+
+.user-info p {
+    color: #8a9ba8;
+    /* Couleur subtile pour les informations secondaires */
+    font-size: 0.9rem;
+    /* Taille de police lÃ©gÃ¨rement rÃ©duite pour hiÃ©rarchiser l'information */
+}
+
+/* Style pour la section des informations de balance */
+.balance-info {
+    display: flex;
+    justify-content: space-between;
+    /* RÃ©partit l'espace entre les Ã©lÃ©ments */
+    align-items: center;
+    /* Alignement vertical au centre */
+    background: linear-gradient(145deg, #0d6efd, #0dcaf0);
+    /* DÃ©gradÃ© bleu pour l'esthÃ©tique */
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Style pour le bouton de copie */
+#copy-btn {
+    background-color: #0d6efd;
+    /* Bleu vibrant pour attirer l'attention */
+    border: none;
+    /* Suppression de la bordure par dÃ©faut pour un look moderne */
+    border-radius: 4px;
+    /* Bords lÃ©gÃ¨rement arrondis */
+    color: #ffffff;
+    /* Texte blanc pour la lisibilitÃ© */
+    padding: 10px 20px;
+    /* Padding gÃ©nÃ©reux pour une grande surface cliquable */
+    cursor: pointer;
+    /* Change le curseur pour indiquer l'interactivitÃ© */
+    transition: background-color 0.3s;
+    /* Transition douce pour le survol */
+}
+
+#copy-btn:hover {
+    background-color: #0a58ca;
+    /* Assombrissement au survol pour un feedback visuel */
+}
+
+/* Adaptations pour les appareils mobiles */
+@media (max-width: 768px) {
+    .dashboard {
+        margin: 10px;
+        /* Marge rÃ©duite pour les petits Ã©crans */
+        padding: 10px;
+        /* Padding rÃ©duit pour maximiser l'espace disponible */
+    }
+
+    .user-profile,
+    .referral-link-container {
+        flex-direction: column;
+        /* Empile les Ã©lÃ©ments verticalement pour s'adapter aux Ã©crans Ã©troits */
+        align-items: stretch;
+        /* Ã‰tire les Ã©lÃ©ments pour utiliser toute la largeur disponible */
+    }
+
+    #referral-link,
+    #copy-btn {
+        margin-bottom: 10px;
+        /* Espacement pour sÃ©parer les Ã©lÃ©ments empilÃ©s */
+    }
+}
+
+.referral-link-container {
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    margin: auto;
+}
+
+.referral-link-info h3 {
+    margin: 0 0 10px 0;
+    color: #0dcaf0;
+}
+
+#referral-link {
+    background-color: #0a0f0d;
+    border: 2px solid #0d6efd;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    /* Ajuste la largeur pour qu'elle soit flexible */
+    box-sizing: border-box;
+    /* S'assure que le padding et la bordure sont inclus dans la largeur totale */
+    max-width: 500px;
+    /* Optionnel: dÃ©finit une largeur maximale pour Ã©viter que le champ ne devienne trop large sur de grands Ã©crans */
+    margin: auto;
+    /* Centre le champ si son conteneur est plus large que la max-width */
+}
+
+
+#copy-btn {
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 10px 20px;
+    width: 30%;
+    margin-left: 3%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#copy-btn:hover {
+    background-color: #0a58ca;
+
+
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    flex-direction: row;
+    padding: 0rem 3rem;
+}
+
+/* Adaptations pour mobile */
+@media (max-width: 768px) {
+    .referral-link-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flex {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #referral-link {
+        margin-bottom: 10px;
+        /* Espacement entre l'input et le bouton sur mobile */
+    }
+
+    #copy-btn {
+        width: 100%;
+        margin-left: 0%;
+        /* Bouton pleine largeur sur mobile */
+    }
+}
+
+h3,
+h2,
+p {
+    text-align: center;
+    font-size: 1.15em;
+    margin: 5px 0;
+    /* RÃ©duction de l'espacement */
+    padding: 0;
+    text-align: center;
+    /* Assure le centrage du texte */
+}
+
+.both-profits {
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 15%;
+}
+
+.profits-container {
+    width: 350px;
+    margin: auto;
+    background-color: #12181b;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    position: relative;
+    /* NÃ©cessaire pour la position des pseudo-Ã©lÃ©ments */
+    background-image: url("green-blur.png");
+    background-size: cover;
+    /* ou 'contain' selon le besoin */
+}
+
+
+
+
+/* Assurez-vous que le contenu est visible par-dessus le pseudo-Ã©lÃ©ment */
+.profits-details,
+.withdraw-details,
+.profits-icon,
+.withdraw-icon,
+#withdraw-btn {
+    position: relative;
+    display: flex;
+    /* Utilise Flexbox pour le conteneur */
+
+    z-index: 1;
+}
+
+/* Animation du bouton pour un effet pulsant */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(17, 253, 13, 0.7);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 10px rgba(13, 110, 253, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+    }
+}
+
+#withdraw-btn {
+    animation: pulsate 2s infinite;
+}
+
+.profits-details,
+.withdraw-details {
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin: 10px;
+    justify-content: space-around;
+}
+
+.profits-icon,
+.withdraw-icon {
+    width: 40px;
+    /* Ajustez selon la taille souhaitÃ©e */
+    height: auto;
+    margin: auto;
+
+}
+
+#profits-amount {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#withdraw-btn {
+    background-color: #02d352;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#withdraw-btn:hover {
+    background-color: #02d352;
+}
+
+@media (max-width: 768px) {
+    .profits-container {
+        flex-direction: column;
+        width: 300px;
+    }
+}
+
+/* Adaptations pour les appareils mobiles */
+@media (max-width: 768px) {
+    .profits-container {
+        margin: 10px;
+        /* Marge rÃ©duite pour les petits Ã©crans */
+        padding: 10px;
+        /* Padding rÃ©duit pour maximiser l'espace disponible */
+        flex-direction: column;
+        /* Empile les Ã©lÃ©ments verticalement */
+
+    }
+
+    .both-profits {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0%;
+    }
+
+
+}
+
+@media (min-width: 769px) {
+    .profits-container {
+        flex-direction: row;
+        /* Alignement horizontal pour les grands Ã©crans */
+        justify-content: space-around;
+        /* Espacement autour des Ã©lÃ©ments */
+    }
+}
+
+h3,
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    /* Normal weight pour le texte */
+}
+
+h3 {
+    font-size: 1rem;
+    /* Taille de police ajustÃ©e pour les titres */
+    font-weight: 500;
+    /* Medium weight pour les titres, les rendant lÃ©gÃ¨rement plus Ã©pais */
+    margin-bottom: 10px;
+    /* Ajoute un peu d'espace sous les titres */
+}
+
+p {
+    font-size: 1rem;
+    /* Taille standard pour le texte */
+    line-height: 1.5;
+    /* Espacement de ligne pour amÃ©liorer la lisibilitÃ© */
+    color: #02d352;
+
+}
+
+span {
+    color: #02d352;
+
+}
+
+#withdraw-btns {
+    background-color: #02d352;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#withdraw-btns:hover {
+    background-color: #02d352;
+}
+
+#withdraw-btns {
+    background-color: #02d352;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+#withdraw-btns {
+    animation: pulsate 2s infinite;
+}
+
+.withdraw-btn,
+.withdraw-btns {
+    margin: 20px;
+}
+
+
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    /* Espacement uniforme autour des boutons */
+    width: 100%;
+    /* Assure que le conteneur des boutons utilise toute la largeur disponible */
+    margin-top: 20px;
+    /* Espacement entre le montant et les boutons */
+}
+
+.navbar {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 87%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Ombre subtile pour la profondeur */
+    z-index: 1000;
+    transition: background-color 0.3s;
+    /* Transition douce pour le changement de couleur */
+    border-radius: 20px;
+}
+
+.dashboard {
+    margin-top: 40px;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    background-color: #ffffff;
+    /* IcÃ´ne hamburger blanche pour un contraste Ã©levÃ© */
+    transition: all 0.3s;
+    /* Animation fluide */
+}
+
+.nav-list li a {
+    color: #ffffff;
+    /* Couleur du texte blanc pour le contraste */
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    /* Bords arrondis pour un look doux */
+    transition: background-color 0.3s;
+    /* Feedback au survol */
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+    background-color: #0d6efd;
+    /* Changement de couleur pour le feedback */
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        background-color: #058fd3;
+        /* Assure que le menu dÃ©roulant est clairement visible */
+    }
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background-color: #ffffff;
+    height: 2px;
+    width: 30px;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    left: 0;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+/* Configuration initiale du menu latÃ©ral cachÃ© */
+.nav-list {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -30vw;
+    /* Le menu dÃ©marre cachÃ© Ã  gauche */
+    width: 30vw;
+    /* Largeur du menu Ã  30% de la largeur de la fenÃªtre */
+    background-color: #12181b;
+    padding: 60px 10px 10px 10px;
+    /* Espace pour la barre de navigation en haut */
+    transition: left 0.3s ease-in-out;
+    /* Animation fluide pour faire glisser le menu */
+    z-index: 1000;
+    /* Assure que le menu glisse par-dessus le contenu de la page */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alignement des Ã©lÃ©ments du menu */
+}
+
+/* Styles pour les Ã©lÃ©ments de liste et les liens dans le menu */
+.nav-list li {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    display: block;
+}
+
+/* Style pour afficher le menu lorsqu'il est activÃ© */
+.nav-list.active {
+    left: 0;
+    /* DÃ©place le menu pour qu'il soit visible */
+}
+
+.nav-list {
+    left: -100vw;
+    /* Assure que le menu est totalement hors de vue */
+    /* Les autres styles restent inchangÃ©s */
+}
+
+
+.profits,
+.withdraw {
+    margin: auto;
+    gap: 2em;
+    justify-content: space-around;
+
+}
+
+.mining-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+}
+
+.mining-machine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #12181b;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #ffffff;
+    margin: 20px auto;
+    max-width: 300px;
+    /* Ajustez selon la taille dÃ©sirÃ©e */
+}
+
+.machine-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.machine-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.machine-price,
+.machine-profit,
+.machine-days {
+    margin: 10px 0;
+}
+
+.buy-machine-btn {
+    background-color: #02d352;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: pulsate 2s infinite;
+
+
+}
+
+.buy-machine-btn:hover {
+    background-color: #02d352;
+}
+
+
+.site-footer {
+    background-color: #12181b;
+    /* Couleur de fond sombre pour un look moderne */
+    color: #ffffff;
+    /* Texte en blanc pour le contraste */
+    padding: 20px 0;
+    /* Espacement autour du contenu du footer */
+    text-align: center;
+    /* Centre le contenu du footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    /* Ombre subtile pour donner de la profondeur */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Police cohÃ©rente avec le reste du site */
+}
+
+.footer-content p {
+    margin: 10px 0;
+    /* Espacement entre les lignes de texte */
+}
+
+/* Style optionnel pour les liens si votre footer en contient */
+.site-footer a {
+    color: #4fa1f3;
+    /* Couleur des liens */
+    text-decoration: none;
+    /* Pas de soulignement */
+    transition: color 0.3s ease;
+    /* Transition douce pour le survol des liens */
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    /* Changement de couleur au survol */
+}
+
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #12181b;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+    z-index: 1000;
+    border-radius: 45px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-item span {
+    color: #ffffff;
+    /* Couleur des liens */
+}
+
+.nav-item img {
+    width: 24px;
+    /* Ajustez selon la taille de vos icÃ´nes */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.nav-item span {
+    font-size: 12px;
+    text-align: center;
+}
+
+.team-partners-container {
+    display: flex;
+    justify-content: space-between;
+    /* RÃ©partit l'espace uniformÃ©ment */
+    align-items: center;
+    /* Alignement vertical au centre */
+    background-color: #0a0f0d;
+    /* Fond sombre et moderne */
+    padding: 20px;
+    border-radius: 12px;
+    /* Bords arrondis */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    /* Ombre pour effet de profondeur */
+    margin: 20px auto;
+    max-width: 90%;
+    /* S'adapte Ã  la largeur du conteneur parent */
+}
+
+.team-section,
+.partners-section {
+    flex: 1;
+    /* Permet Ã  chaque section de remplir une part Ã©gale de l'espace */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Centrage du texte */
+    padding: 20px;
+    background: linear-gradient(135deg, #009efd, #2a2a72);
+    /* DÃ©gradÃ© pour un look dynamique */
+    color: #ffffff;
+    border-radius: 12px;
+    margin: 0 10px;
+    /* Espacement entre les sections */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-section:hover,
+.partners-section:hover {
+    transform: translateY(-5px);
+    /* SoulÃ¨ve lÃ©gÃ¨rement la section au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    /* Ombre accentuÃ©e pour un effet visuel au survol */
+}
+
+h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .team-partners-container {
+        flex-direction: column;
+        /* Les sections s'empilent verticalement sur les petits Ã©crans */
+        align-items: stretch;
+        /* Ã‰tend les sections pour utiliser toute la largeur disponible */
+    }
+
+    .team-section,
+    .partners-section {
+        margin: 10px 0;
+        /* Ajuste l'espacement vertical pour le layout empilÃ© */
+    }
+}
+
+.team-partners-container {
+    display: flex;
+    justify-content: space-evenly;
+    /* Distribue l'espace uniformÃ©ment */
+    align-items: center;
+    /* Alignement vertical au centre */
+    background-color: #12181b;
+    /* Fond sombre pour un look moderne */
+    padding: 20px;
+    border-radius: 12px;
+    /* Bords arrondis */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    /* Ombre pour un effet de profondeur */
+    margin: 20px auto;
+    max-width: 800px;
+    /* Largeur maximale du conteneur */
+}
+
+.team-section,
+.partners-section {
+    flex: 1;
+    /* Permet Ã  chaque section de remplir une part Ã©gale de l'espace */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Centrage du texte */
+    padding: 20px;
+    margin: 0 10px;
+    /* Espacement entre les deux sections */
+    background: linear-gradient(145deg, #009efd, #2a2a72);
+    /* DÃ©gradÃ© pour un look dynamique */
+    color: #ffffff;
+    border-radius: 8px;
+    /* Bords arrondis pour chaque section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre pour un effet visuel */
+}
+
+/* Style pour les titres et paragraphes */
+h3,
+p {
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-partners-container {
+        flex-direction: column;
+        /* Empile les Ã©lÃ©ments verticalement sur petits Ã©crans */
+        align-items: stretch;
+        /* Ajuste les Ã©lÃ©ments pour qu'ils occupent toute la largeur */
+    }
+
+    .team-section,
+    .partners-section {
+        margin: 10px 0;
+        /* Espacement vertical entre les sections */
+    }
+}
+
+.team-partners-container p {
+    color: white;
+}
+
+.partners-table-container {
+    margin: 20px auto;
+    max-width: 800px;
+    /* Ajustez selon la largeur souhaitÃ©e */
+    overflow-x: auto;
+    /* Pour la rÃ©activitÃ© sur petits Ã©crans */
+}
+
+.partners-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Supprime les espaces entre les cellules */
+    background-color: #12181b;
+    /* Fond sombre pour un look moderne */
+    color: #ffffff;
+    /* Texte en blanc */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    /* Ombre pour un effet de profondeur */
+    border-radius: 12px;
+    /* Bords arrondis */
+    overflow: hidden;
+    /* Garde l'ombre et les bords arrondis contenus */
+}
+
+.partners-table th,
+.partners-table td {
+    text-align: left;
+    /* Alignement du texte Ã  gauche */
+    padding: 12px 20px;
+    /* Espacement interne pour le texte */
+}
+
+.partners-table thead {
+    background: linear-gradient(145deg, #009efd, #2a2a72);
+    /* DÃ©gradÃ© pour l'en-tÃªte */
+}
+
+.partners-table tbody tr:nth-child(odd) {
+    background-color: #0a0f0d;
+    /* Couleur d'arriÃ¨re-plan pour les lignes impaires */
+}
+
+.partners-table tbody tr:hover {
+    background-color: #0d6efd;
+    /* Couleur d'arriÃ¨re-plan au survol */
+}
+
+.user-plan-container {
+    display: flex;
+    align-items: center;
+    background-color: #12181b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 90%;
+    color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre pour un effet visuel */
+
+}
+
+.plan-image img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    /* Ensures spacing between the image and the details */
+}
+
+.plan-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-title {
+    color: #0dcef0;
+    margin-bottom: 10px;
+}
+
+.detail {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.detail span {
+    font-weight: bold;
+    color: white;
+}
+
+.site-footer p {
+    color: white;
+}
+
+.profits-container {
+    text-align: center;
+    /* Centre le titre et le contenu */
+}
+
+.usdt-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centre le contenu horizontalement */
+    margin-bottom: 20px;
+    /* Espace avant les boutons */
+}
+
+.usdt-icon {
+    width: 20px;
+    /* Taille de l'icÃ´ne */
+    height: auto;
+    margin-right: 5px;
+    /* Espacement entre l'icÃ´ne et le texte */
+}
+
+#usdt-amount {
+    font-size: 1rem;
+    /* Taille du texte */
+}
+
+.nav-item.active span,
+.nav-item.active img {
+    color: green;
+    /* Change la couleur du texte en vert */
+    filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(1352%) hue-rotate(88deg) brightness(119%) contrast(119%);
+    /* Le filtre est appliquÃ© pour changer la couleur de l'icÃ´ne en vert. Ajustez selon le besoin */
+}
+
+/* Styles de base pour .bottom-nav et .nav-item */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #12181b;
+    /* Ou toute autre couleur de fond souhaitÃ©e */
+    padding: 10px 0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    /* Couleur par dÃ©faut du texte */
+}
+
+.nav-item img {
+    width: 30px;
+    /* Ajustez selon la taille souhaitÃ©e des icÃ´nes */
+    margin-bottom: 5px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-evenly;
+    /* Assure une rÃ©partition uniforme de l'espace */
+    padding: 20px;
+    background-color: #12181b;
+    color: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    flex-wrap: wrap;
+    /* Permet aux Ã©lÃ©ments de s'ajuster sur des lignes diffÃ©rentes si nÃ©cessaire */
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    /* Applique une marge en bas pour tous les Ã©lÃ©ments */
+}
+
+.stat-item:last-child {
+    margin-bottom: 60px;
+    /* Augmente la marge du bas pour le dernier Ã©lÃ©ment */
+}
+
+.stat-icon {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.stat-description {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        /* Organise les Ã©lÃ©ments statistiques verticalement sur petits Ã©crans */
+    }
+
+    .stat-item {
+        justify-content: center;
+        /* Centre les Ã©lÃ©ments statistiques horizontalement */
+        width: 100%;
+        /* Permet aux Ã©lÃ©ments statistiques d'occuper toute la largeur */
+    }
+}
